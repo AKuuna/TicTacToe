@@ -60,17 +60,17 @@ body {
   background: lightsteelblue;
   border: 1px solid darkblue;
   float: left;
-  font-size: 40px;
+  font-size: 70px;
   font-weight: bold;
   line-height: 30px;
   color: darkslateblue;
   font-family: Arial, Helvetica, sans-serif;
-  height: 50px;
+  height: 80px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 50px;
+  width: 80px;
 }
 
 .board-row:after {
@@ -80,13 +80,26 @@ body {
 }
 
 .status {
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: darkblue;
 }
+
 .game {
   display: flex;
   flex-direction: row;
 }
 
 .game-info {
+  margin-top: 30px;
   margin-left: 20px;
+}
+.game-title {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-size: 26px;
+  font-weight: bold;
+  color: darkblue;
 }

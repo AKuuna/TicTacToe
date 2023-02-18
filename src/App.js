@@ -25,14 +25,14 @@ function Board({ xIsNext, squares, onPlay }) {
   const winner = calculateWinner(squares);
   let status;
   if (winner) {
-    status = "Winner: " + winner;
+    status = "The Winner is: " + winner;
   } else {
     status = "Next is turn for: " + (xIsNext ? "X" : "O");
   }
 
   return (
     <>
-      <div className="status">{status}</div>
+      <div className="game-title">Tic Tac Toe</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
@@ -48,6 +48,7 @@ function Board({ xIsNext, squares, onPlay }) {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
+      <div className="status">{status}</div>
     </>
   );
 }
@@ -71,9 +72,9 @@ export default function Game() {
   const moves = history.map((squares, move) => {
     let desc;
     if (move > 0) {
-      desc = "Go to move #" + move;
+      desc = "Back to move # " + move;
     } else {
-      desc = "Go to game start";
+      desc = "Back to gamestart";
     }
     return (
       <li key={move}>
@@ -103,7 +104,7 @@ function calculateWinner(squares) {
     [1, 4, 7],
     [2, 5, 8],
     [0, 4, 8],
-    [2, 4, 6],
+    [2, 4, 6]
   ];
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
