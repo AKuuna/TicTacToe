@@ -57,23 +57,25 @@ body {
 }
 
 .square {
-  background: #fff;
-  border: 1px solid #999;
+  background: lightsteelblue;
+  border: 1px solid darkblue;
   float: left;
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
+  line-height: 30px;
+  color: darkslateblue;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 50px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 50px;
 }
 
 .board-row:after {
   clear: both;
-  content: '';
+  content: "";
   display: table;
 }
 
